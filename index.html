@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<h1 class="text-3xl font-bold mb-4">Tailwind Components</h1>
+<nav class="mb-4">
+    <ul class="flex flex-wrap space-x-2">
+        {% for component in site.components %}
+        <li>
+            <a href="#{{ component.slug }}" class="text-blue-500">{{ component.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
+<div>
+    {% for component in site.components %}
+    <div id="{{ component.slug }}" class="mb-8">
+        <h2 class="text-2xl font-semibold mb-2">{{ component.title }}</h2>
+        <div class="component-container">
+            {{ component.content | markdownify }}
+            <pre class="component-code bg-gray-200 p-2 rounded mt-2 hidden"></pre>
+            <button class="toggle-code bg-blue-500 text-white px-2 py-1 rounded mt-2">Show Code</button>
+            <button class="copy-code bg-green-500 text-white px-2 py-1 rounded mt-2 hidden">Copy Code</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<script src="{{ '/assets/js/script.js' | relative_url }}"></script>
