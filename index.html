@@ -12,9 +12,13 @@ layout: default
             <h2 class="text-2xl font-semibold mb-2">{{ component.title }}</h2>
             <div class="component-container">
                 {{ component.content | markdownify }}
-                <pre class="component-code bg-gray-200 p-2 rounded mt-2 hidden"></pre>
-                <button class="toggle-code bg-blue-500 text-white px-2 py-1 rounded mt-2">Show Code</button>
-                <button class="copy-code bg-green-500 text-white px-2 py-1 rounded mt-2 hidden">Copy Code</button>
+                <div class="bg-zinc-200 rounded-b-lg p-2">
+                    <div class="flex justify-end space-x-2">
+                        <button class="copy-code bg-emerald-500 text-white font-semibold px-3 py-2 rounded uppercase tracking-[1px] text-sm hidden">Copy Code</button>
+                        <button class="toggle-code bg-zinc-100 text-zinc-600 font-semibold px-3 py-2 rounded uppercase tracking-[1px] text-sm">Show Code</button>
+                    </div>
+                    <pre class="component-code bg-zinc-100 p-2 rounded mt-2 hidden"></pre>
+                </div>
             </div>
         </div>
         {% endfor %}
