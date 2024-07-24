@@ -3,7 +3,27 @@ title: Modal
 ---
 
 <div class="component">
-    <div class="w-[400px] h-[400px] bg-blue-500">
-        This is a modal
+    <!-- Modal Background Overlay -->
+    <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50"></div>
+    
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full">
+            <!-- ToolBar -->
+            <div class="flex items-center px-6 py-4">
+                <h4 class="font-semibold flex-1">Edit Columns</h4>
+                <div class="space-x-2 text-sm">
+                    Advanced user? <a href="" class="text-sky-600 hover:text-sky-700 hover:underline">Edit YAML</a>
+                </div>
+            </div>
+
+            <!-- Modal Content -->
+             <div>
+                <!-- Search -->
+                <div class="bg-blue-500 p-8">
+                    <input type="text" class="bg-white rounded-md">
+                </div>
+             </div>
+        </div>
     </div>
 </div>
