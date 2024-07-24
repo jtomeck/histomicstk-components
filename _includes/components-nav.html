@@ -1,0 +1,8 @@
+
+    <ul class="space-y-2 !m-0">
+        {% for component in site.components %}
+        <li>
+            <a href="#{{ component.slug }}" class="hover:bg-gray-200 block px-3 py-1 rounded text-blue-500">{{ component.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
