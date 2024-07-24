@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
+
+<body class="bg-zinc-100 text-zinc-700">
     <div class="py-5 px-8">
         {{ content }}
     </div>

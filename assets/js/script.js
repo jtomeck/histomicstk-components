@@ -1,33 +1,43 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const components = document.querySelectorAll('.component-container');
+$(document).ready(function() {
+    $('.component-container').each(function() {
+        const $container = $(this);
+        const $codeBlock = $container.find('.component-code');
+        const $toggleCodeButton = $container.find('.toggle-code');
+        const $copyCodeButton = $container.find('.copy-code');
 
-    components.forEach(container => {
-        const component = container.querySelector('.component');
-        const codeBlock = container.querySelector('.component-code');
-        const toggleButton = container.querySelector('.toggle-code');
-        const copyButton = container.querySelector('.copy-code');
+        // Add the component's HTML code to the code block
+        const code = $container.find('.component').prop('outerHTML')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+        $codeBlock.html(code);
 
-        if (component && codeBlock && toggleButton && copyButton) {
-            // Generate the code version of the component
-            const code = component.outerHTML.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-            codeBlock.innerHTML = code;
+        // Initially hide the code block
+        $codeBlock.hide();
 
-            // Toggle between component and code view
-            toggleButton.addEventListener('click', () => {
-                const isCodeVisible = !codeBlock.classList.contains('hidden');
-                codeBlock.classList.toggle('hidden', isCodeVisible);
-                component.classList.toggle('hidden', !isCodeVisible);
-                copyButton.classList.toggle('hidden', isCodeVisible);
-                toggleButton.textContent = isCodeVisible ? 'Show Code' : 'Show Component';
-            });
+        // Toggle code block
+        $toggleCodeButton.on('click', function() {
+            if ($codeBlock.is(':visible')) {
+                $codeBlock.slideUp(300, function() {
+                    $toggleCodeButton.text('Show Code');
+                    $copyCodeButton.hide();
+                });
+            } else {
+                $codeBlock.slideDown(300, function() {
+                    $toggleCodeButton.text('Hide Code');
+                    $copyCodeButton.show();
+                });
+            }
+        });
 
-            // Copy code to clipboard
-            copyButton.addEventListener('click', () => {
-                navigator.clipboard.writeText(codeBlock.innerText);
-                alert('Code copied to clipboard');
-            });
-        } else {
-            console.log('One or more elements are missing in container:', container);
-        }
+        // Copy code to clipboard
+        $copyCodeButton.on('click', function() {
+            navigator.clipboard.writeText($codeBlock.text())
+                .then(function() {
+                    $copyCodeButton.text('Copied!');
+                    setTimeout(function() {
+                        $copyCodeButton.text('Copy Code');
+                    }, 2000);
+                });
+        });
     });
 });
