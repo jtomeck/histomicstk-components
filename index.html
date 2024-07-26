@@ -1,27 +1,27 @@
 ---
 layout: default
 ---
-<div class="flex space-x-6">
-    <nav class="p-8 w-72">
+<div class="flex">
+    <nav class="p-8 w-1/5">
         <h4 class="text-lg font-semibold mb-6">Tailwind Components</h4>
         {% include components-nav.html %}
     </nav>
-    <div class="flex-1 p-8">
-        {% for component in site.components %}
-        <div id="{{ component.slug }}" class="mb-8">
-            <h2 class="text-2xl font-semibold mb-2">{{ component.title }}</h2>
-            <div class="component-container">
-                {{ component.content | markdownify }}
-                <div class="bg-zinc-200 rounded-b-lg p-2">
-                    <div class="flex justify-end space-x-2">
-                        <button class="copy-code bg-emerald-500 text-white font-semibold px-3 py-2 rounded uppercase tracking-[1px] text-sm hidden">Copy Code</button>
-                        <button class="toggle-code bg-zinc-100 text-zinc-600 font-semibold px-3 py-2 rounded uppercase tracking-[1px] text-sm">Show Code</button>
+    <div class="p-8 w-4/5">
+            {% for component in site.components %}
+            <div id="{{ component.slug }}" class="mb-8 w-full">
+                <h2 class="text-2xl font-semibold mb-2">{{ component.title }}</h2>
+                <div class="component-container">
+                    <!-- NOTE: .component needs to be single line or indentation in the code preview will appear broken -->
+                    <div class="component">{{ component.content | markdownify }}</div>
+                    <div class="bg-zinc-200 rounded-b-lg p-2">
+                        <div class="flex justify-end space-x-2">
+                            <button class="copy-code bg-emerald-500 text-white font-semibold px-3 py-2 rounded uppercase tracking-[1px] text-sm hidden">Copy Code</button>
+                            <button class="toggle-code bg-zinc-100 text-zinc-600 font-semibold px-3 py-2 rounded uppercase tracking-[1px] text-sm">Show Code</button>
+                        </div>
+                        <pre class="component-code bg-zinc-700 overflow-x-auto text-zinc-200 px-6 py-4 rounded mt-2 hidden w-full"></pre>
                     </div>
-                    <pre class="component-code bg-zinc-700 text-zinc-200 px-6 py-4 rounded mt-2 hidden"></pre>
                 </div>
             </div>
-        </div>
         {% endfor %}
     </div>
-
 </div>
