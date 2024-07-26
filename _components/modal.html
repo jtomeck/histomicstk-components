@@ -2,28 +2,116 @@
 title: Modal
 ---
 
-<div class="component">
-    <!-- Modal Background Overlay -->
-    <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50"></div>
-    
-    <!-- Modal -->
-    <div id="modal" class="fixed inset-0 flex items-center justify-center">
-        <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full">
-            <!-- ToolBar -->
-            <div class="flex items-center px-6 py-4">
-                <h4 class="font-semibold flex-1">Edit Columns</h4>
-                <div class="space-x-2 text-sm">
-                    Advanced user? <a href="" class="text-sky-600 hover:text-sky-700 hover:underline">Edit YAML</a>
+<!-- Modal Background Overlay -->
+<div id="modalOverlay" class="fixed inset-0 bg-zinc-900 bg-opacity-70 backdrop-filter backdrop-blur-sm z-40"></div>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 flex items-center justify-center z-50">
+    <div class="bg-white flex flex-col h-full max-h-[calc(100vh-100px)] max-w-3xl overflow-hidden rounded-lg shadow-lg w-full">
+        <!-- ToolBar -->
+        <div class="flex flex-grow-0 items-center px-4 py-2">
+            <h4 class="font-semibold flex-1">Edit Columns</h4>
+            <div class="space-x-2 text-sm">
+                Advanced user? <a href="" class="text-secondary-500 hover:text-secondary-700 hover:underline">Edit YAML</a>
+            </div>
+        </div>
+
+        <!-- Modal Content -->
+        <div class="flex flex-col flex-grow overflow-hidden">
+            <!-- Search -->
+            <div class="bg-primary-700 p-4 shadow flex flex-col flex-grow h-full">
+                <input type="text" class="bg-white border border-zinc-200 rounded-md w-full px-4 py-3" placeholder="Add a column type">
+                <!-- Results -->
+                <div class="bg-primary-100 rounded-md flex-grow overflow-hidden mt-4">
+                    <ul class="h-full overflow-y-auto">
+                        <li class="border-b border-primary-300">
+                            <label class="custom-checkbox px-3 py-2 text-primary-800 w-full">
+                                <input type="checkbox">
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-primary-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
+                                Checkbox text
+                            </label>
+                        </li>
+                        <li class="border-b border-primary-300">
+                            <label class="custom-checkbox px-3 py-2 text-primary-800 w-full">
+                                <input type="checkbox">
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-primary-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
+                                Checkbox text
+                            </label>
+                        </li>
+                        <li class="border-b border-primary-300">
+                            <label class="custom-checkbox px-3 py-2 text-primary-800 w-full">
+                                <input type="checkbox">
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-primary-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
+                                Checkbox text
+                            </label>
+                        </li>
+                        <li class="border-b border-primary-300">
+                            <label class="custom-checkbox px-3 py-2 text-primary-800 w-full">
+                                <input type="checkbox">
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-primary-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
+                                Checkbox text
+                            </label>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Modal Content -->
-             <div>
-                <!-- Search -->
-                <div class="bg-blue-500 p-8">
-                    <input type="text" class="bg-white rounded-md">
-                </div>
-             </div>
+            <div class="bg-zinc-100 p-4">
+                <ul class="space-y-2">
+                    <li class="bg-white border border-zinc-200 flex items-center px-3 py-2 rounded-md space-x-2">
+                        <i class="ri-draggable text-xl text-zinc-500"></i>
+                        <span class="flex-1 text-zinc-400">Name</span>
+                        <i class="ri-lock-line text-xl text-zinc-500"></i>
+                    </li>
+                    <li class="bg-white border border-zinc-200 flex items-center px-3 py-2 rounded-md space-x-2">
+                        <i class="ri-draggable text-xl text-zinc-500"></i>
+                        <span class="flex-1 text-zinc-400">Size</span>
+                        <i class="ri-lock-line text-xl text-zinc-500"></i>
+                    </li>
+                    <li class="bg-white border border-zinc-200 flex items-center px-3 py-2 rounded-md space-x-2">
+                        <i class="ri-draggable text-xl text-zinc-500"></i>
+                        <span class="flex-1">Stain</span>
+                        <i class="ri-arrow-down-s-line text-xl text-zinc-500"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white border-t border-zinc-200 flex justify-end p-4 space-x-2">
+                <button class="bg-transparent hover:bg-zinc-100 px-3 py-2 rounded-md tracking-[1px] uppercase">Cancel</button>
+                <button class="bg-secondary-500 hover:bg-secondary-700 px-3 py-2 rounded-md text-white tracking-[1px] uppercase">Save</button>
+            </div>
         </div>
     </div>
 </div>
+
+<style>
+    /* Use Remix Icons for checboxes
+       https://remixicon.com/
+    */
+    
+    .custom-checkbox {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
+    .custom-checkbox input {
+        display: none;
+    }
+    .custom-checkbox .icon-unchecked {
+        display: inline;
+    }
+    .custom-checkbox .icon-checked {
+        display: none;
+    }
+    .custom-checkbox input:checked ~ .icon-unchecked {
+        display: none;
+    }
+    .custom-checkbox input:checked ~ .icon-checked {
+        display: inline;
+    }
+</style>
