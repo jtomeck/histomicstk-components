@@ -12,7 +12,16 @@ layout: default
                 <h2 class="text-2xl font-semibold mb-2">{{ component.title }}</h2>
                 <div class="component-container">
                     <!-- NOTE: .component needs to be single line or indentation in the code preview will appear broken -->
-                    <div class="component">{{ component.content | markdownify }}</div>
+                    {% if component.description %}
+                        <div class="component-desc flex items-center justify-center">
+                            <i class="ri-information-line text-2xl mr-3"></i>
+                            {{ component.description }}
+                        </div>
+                        <!-- NOTE: Component description is for when a component has no display (like config code or similar), but the .component div still needs to be there. This is why it is there and has the .hidden class -->
+                        <div class="component hidden">{{ component.content | markdownify }}</div>
+                    {% else %}
+                        <div class="component">{{ component.content | markdownify }}</div>
+                    {% endif %}
                     <div class="bg-zinc-200 rounded-b-lg p-2">
                         <div class="flex justify-end space-x-2">
                             <button class="copy-code bg-emerald-500 text-white font-semibold px-3 py-2 rounded uppercase tracking-[1px] text-sm hidden">Copy Code</button>
