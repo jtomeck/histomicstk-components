@@ -6,7 +6,7 @@ $(document).ready(function() {
         const $copyCodeButton = $container.find('.copy-code');
 
         // Add the component's HTML code to the code block
-        const code = $container.find('.component').prop('outerHTML')
+        const code = $container.find('.component').prop('innerHTML')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;');
         $codeBlock.html(code);
