@@ -8,78 +8,123 @@ title: Modal
 <!-- Modal -->
 <div id="modal" class="fixed inset-0 flex items-center justify-center z-50">
     <div class="bg-white flex flex-col h-full max-h-[calc(100vh-100px)] max-w-3xl overflow-hidden rounded-lg shadow-lg w-full">
-        <!-- ToolBar -->
-        <div class="flex flex-grow-0 items-center px-4 py-2">
+        
+        <!-- Top Bar -->
+        <div class="flex items-center px-4 py-2 bg-gray-200">
             <h4 class="font-semibold flex-1">Edit Columns</h4>
             <div class="space-x-2 text-sm">
                 Advanced user? <a href="" class="text-secondary-500 hover:text-secondary-700 hover:underline">Edit YAML</a>
             </div>
         </div>
-
+        
         <!-- Modal Content -->
         <div class="flex flex-col flex-grow overflow-hidden">
-            <!-- Search -->
-            <div class="bg-primary-700 p-4 shadow flex flex-col flex-grow h-full">
-                <input type="text" class="bg-white border border-zinc-200 rounded-md w-full px-4 py-3" placeholder="Add a column type">
-                <!-- Results -->
-                <div class="bg-primary-100 rounded-md flex-grow overflow-hidden mt-4">
+            
+            <!-- Search Bar -->
+            <div id="searchSection" class="relative flex flex-col p-4 bg-primary-700 shadow transition-all duration-300">
+                <div class="flex items-center">
+                    <input id="searchInput" type="text" class="bg-white border border-zinc-200 rounded-md w-full px-4 py-3" placeholder="Add a column type" onfocus="expandSearch()">
+                    <button id="closeSearchBtn" class="bg-primary-500 hover:bg-primary-800 ml-3 px-2 py-1 rounded-md text-white tracking-[1px] uppercase hidden" onclick="collapseSearch()">Done</button>
+                </div>
+                
+                <!-- Search Results -->
+                <div id="searchResults" class="bg-white rounded-md flex-grow overflow-hidden transition-all duration-300 mt-4 hidden">
                     <ul class="h-full overflow-y-auto">
-                        <li class="border-b border-primary-300">
-                            <label class="custom-checkbox px-3 py-2 text-primary-800 w-full">
+                        <!-- Example search results -->
+                        <li class="border-b border-zinc-200">
+                            <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-primary-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
                         </li>
-                        <li class="border-b border-primary-300">
-                            <label class="custom-checkbox px-3 py-2 text-primary-800 w-full">
+                        
+                        <li class="border-b border-zinc-200">
+                            <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-primary-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
                         </li>
-                        <li class="border-b border-primary-300">
-                            <label class="custom-checkbox px-3 py-2 text-primary-800 w-full">
+                        
+                        <li class="border-b border-zinc-200">
+                            <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-primary-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
                         </li>
-                        <li class="border-b border-primary-300">
-                            <label class="custom-checkbox px-3 py-2 text-primary-800 w-full">
+                        
+                        <li class="border-b border-zinc-200">
+                            <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-primary-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
                         </li>
+                        
+                        <li class="border-b border-zinc-200">
+                            <label class="custom-checkbox px-3 py-2 w-full">
+                                <input type="checkbox">
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
+                                Checkbox text
+                            </label>
+                        </li>
+                        
+                        <li class="border-b border-zinc-200">
+                            <label class="custom-checkbox px-3 py-2 w-full">
+                                <input type="checkbox">
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-fill icon icon-checked text-secondary-500 mr-3 text-xl"></i>
+                                Checkbox text
+                            </label>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
-
-            <div class="bg-zinc-100 p-4">
+            
+            <!-- Expandable List -->
+            <div id="expandableList" class="flex flex-col flex-grow p-4 bg-zinc-100 overflow-y-auto">
                 <ul class="space-y-2">
-                    <li class="bg-white border border-zinc-200 flex items-center px-3 py-2 rounded-md space-x-2">
-                        <i class="ri-draggable text-xl text-zinc-500"></i>
-                        <span class="flex-1 text-zinc-400">Name</span>
-                        <i class="ri-lock-line text-xl text-zinc-500"></i>
+                    <!-- Non-expandable items with lock icon -->
+                    <li class="bg-white border border-zinc-200 flex flex-col items-stretch rounded-md">
+                        <div class="flex items-center px-3 py-2 space-x-2 cursor-default">
+                            <i class="ri-draggable text-xl text-zinc-500"></i>
+                            <span class="flex-1 text-zinc-400">Name</span>
+                            <i class="ri-lock-line text-xl text-zinc-500"></i>
+                        </div>
                     </li>
-                    <li class="bg-white border border-zinc-200 flex items-center px-3 py-2 rounded-md space-x-2">
-                        <i class="ri-draggable text-xl text-zinc-500"></i>
-                        <span class="flex-1 text-zinc-400">Size</span>
-                        <i class="ri-lock-line text-xl text-zinc-500"></i>
+                    <li class="bg-white border border-zinc-200 flex flex-col items-stretch rounded-md">
+                        <div class="flex items-center px-3 py-2 space-x-2 cursor-default">
+                            <i class="ri-draggable text-xl text-zinc-500"></i>
+                            <span class="flex-1 text-zinc-400">Size</span>
+                            <i class="ri-lock-line text-xl text-zinc-500"></i>
+                        </div>
                     </li>
-                    <li class="bg-white border border-zinc-200 flex items-center px-3 py-2 rounded-md space-x-2">
-                        <i class="ri-draggable text-xl text-zinc-500"></i>
-                        <span class="flex-1">Stain</span>
-                        <i class="ri-arrow-down-s-line text-xl text-zinc-500"></i>
+                    <!-- Expandable items with chevron icon -->
+                    <li class="bg-white border border-zinc-200 flex flex-col items-stretch rounded-md">
+                        <div class="flex items-center px-3 py-2 space-x-2 cursor-pointer" onclick="toggleExpand(this)">
+                            <i class="ri-draggable text-xl text-zinc-500"></i>
+                            <span class="flex-1">Stain</span>
+                            <i class="ri-arrow-down-s-line text-xl text-zinc-500 rotate-0 transition-transform duration-300"></i>
+                        </div>
+                        <div class="expandable-content overflow-hidden max-h-0 transition-all duration-300">
+                            <div class="p-3">
+                                <!-- Content to show when expanded -->
+                                <p>Expanded content for Stain</p>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
-
+            
+            <!-- Footer -->
             <div class="bg-white border-t border-zinc-200 flex justify-end p-4 space-x-2">
                 <button class="bg-transparent hover:bg-zinc-100 px-3 py-2 rounded-md tracking-[1px] uppercase">Cancel</button>
                 <button class="bg-secondary-500 hover:bg-secondary-700 px-3 py-2 rounded-md text-white tracking-[1px] uppercase">Save</button>
@@ -89,10 +134,7 @@ title: Modal
 </div>
 
 <style>
-    /* Use Remix Icons for checboxes
-       https://remixicon.com/
-    */
-    
+    /* Use Remix Icons for checkboxes */
     .custom-checkbox {
         display: inline-flex;
         align-items: center;
@@ -114,4 +156,74 @@ title: Modal
     .custom-checkbox input:checked ~ .icon-checked {
         display: inline;
     }
+    
+    /* Styles to handle the search bar expansion */
+    #searchResults.hidden {
+        display: none;
+    }
+    #searchResults.visible {
+        display: block;
+    }
+    #searchSection.expanded {
+        flex-grow: 1;
+        height: 100%;
+    }
+    #expandableList.hidden {
+        display: none;
+    }
+
+    /* Styles for expandable content */
+    .expandable-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    .expandable-content.expanded {
+        max-height: 500px; /* Adjust this value based on your content */
+    }
+
+    /* Rotate chevron icon */
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
 </style>
+
+<script>
+    function expandSearch() {
+        document.getElementById('searchSection').classList.add('expanded');
+        document.getElementById('searchResults').classList.remove('hidden');
+        document.getElementById('searchResults').classList.add('visible');
+        document.getElementById('expandableList').classList.add('hidden');
+        document.getElementById('closeSearchBtn').classList.remove('hidden');
+    }
+
+    function collapseSearch() {
+        document.getElementById('searchSection').classList.remove('expanded');
+        document.getElementById('searchResults').classList.remove('visible');
+        document.getElementById('searchResults').classList.add('hidden');
+        document.getElementById('expandableList').classList.remove('hidden');
+        document.getElementById('closeSearchBtn').classList.add('hidden');
+        document.getElementById('searchInput').value = '';
+    }
+
+    // Prevent search results from hiding when interacting with the checkboxes
+    document.getElementById('searchResults').addEventListener('mousedown', function(event) {
+        event.preventDefault();
+    });
+
+    // Function to toggle expandable content
+    function toggleExpand(element) {
+        const expandableContent = element.nextElementSibling;
+        const chevronIcon = element.querySelector('i.ri-arrow-down-s-line');
+
+        if (expandableContent.classList.contains('expanded')) {
+            expandableContent.classList.remove('expanded');
+            expandableContent.style.maxHeight = '0';
+            chevronIcon.classList.remove('rotate-180');
+        } else {
+            expandableContent.classList.add('expanded');
+            expandableContent.style.maxHeight = expandableContent.scrollHeight + 'px';
+            chevronIcon.classList.add('rotate-180');
+        }
+    }
+</script>
