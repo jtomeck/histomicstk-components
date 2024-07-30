@@ -108,10 +108,15 @@ title: Modal
                         </div>
                     </li>
                     <!-- Expandable items with chevron icon -->
-                    <li class="bg-white border border-zinc-200 flex flex-col items-stretch rounded-md">
+                    <li class="bg-white border border-zinc-200 flex flex-col group items-stretch rounded-md">
                         <div class="flex items-center px-3 py-2 space-x-2 cursor-pointer" onclick="toggleExpand(this)">
                             <i class="ri-draggable text-xl text-zinc-500"></i>
                             <span class="flex-1">Stain</span>
+                            <div class="border-r border-zinc-200 hidden px-3 group-hover:block">
+                                <button class="hover:bg-zinc-100 flex items-center justify-center rounded-full w-6 h-6">
+                                    <i class="ri-delete-bin-2-fill text-zinc-600 text-lg"></i>
+                                </button>
+                            </div>
                             <i class="ri-arrow-down-s-line text-xl text-zinc-500 rotate-0 transition-transform duration-300"></i>
                         </div>
                         <div class="expandable-content overflow-hidden max-h-0 transition-all duration-300">
