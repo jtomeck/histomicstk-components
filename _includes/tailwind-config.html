@@ -4,45 +4,44 @@
             extend: {
                 colors: {
                     'primary': {
-                        '50': '#f4f6fa',
-                        '100': '#e6ebf3',
-                        '200': '#d2daeb',
-                        '300': '#b3c2dd',
-                        '400': '#8fa3cb',
-                        '500': '#7488bd',
-                        '600': '#6170af',
-                        '700': '#56619f', /* MAIN */
-                        '800': '#4a5083',
-                        '900': '#3f4569',
-                        '950': '#2d3047',
+                        '50': '#eff2fe',
+                        '100': '#e3e6fc',
+                        '200': '#ccd1f9',
+                        '300': '#acb3f5',
+                        '400': '#8b8bee',
+                        '500': '#776fe5',
+                        '600': '#6753d8',
+                        '700': '#5844be',
+                        '800': '#473a99',
+                        '900': '#3d357a', /* main */
+                        '950': '#251f47',
                     },
                     'secondary': {
-                        '50': '#f2fbf9',
-                        '100': '#d3f4ed',
-                        '200': '#a6e9db',
-                        '300': '#72d6c6',
-                        '400': '#44bdac',
-                        '500': '#2a9d8f', /* MAIN */
-                        '600': '#208177',
-                        '700': '#1d6861',
-                        '800': '#1c534f',
-                        '900': '#1b4642',
-                        '950': '#0a2928',
+                        '50': '#eefdfd',
+                        '100': '#d4f9f9',
+                        '200': '#aef2f3',
+                        '300': '#76e6ea',
+                        '400': '#37d1d9',
+                        '500': '#1bb4bf',
+                        '600': '#1b9aaa', /* main */
+                        '700': '#1b7583',
+                        '800': '#1f5f6b',
+                        '900': '#1e4f5b',
+                        '950': '#0e343e',
                     },
                     'accent': {
-                        '50': '#fdf9ed',
-                        '100': '#f8edcd',
-                        '200': '#f0d997',
-                        '300': '#e9c46a', /* MAIN */
-                        '400': '#e2ab3d',
-                        '500': '#da8d26',
-                        '600': '#c16c1e',
-                        '700': '#a04f1d',
-                        '800': '#833e1d',
-                        '900': '#6c331b',
-                        '950': '#3d190b',
+                        '50': '#fafaec',
+                        '100': '#f2f3ce',
+                        '200': '#e8e7a0',
+                        '300': '#dbd56e', /* main */
+                        '400': '#cec141',
+                        '500': '#bfac33',
+                        '600': '#a48a2a',
+                        '700': '#836725',
+                        '800': '#6e5425',
+                        '900': '#5f4624',
+                        '950': '#362612',
                     },
-
                 },
 
                 fontFamily: {
@@ -54,8 +53,8 @@
             /* Use specific colors as primary, secondary and accent without losing the ability to use all 100-950 shades */
             function ({ addUtilities, theme }) {
                 const colors = theme('colors');
-                const primaryColor = colors.primary['700'];
-                const secondaryColor = colors.secondary['500'];
+                const primaryColor = colors.primary['900'];
+                const secondaryColor = colors.secondary['600'];
                 const accentColor = colors.accent['300'];
 
                 addUtilities({
