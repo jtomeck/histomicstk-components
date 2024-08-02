@@ -1,0 +1,217 @@
+---
+title: Table (Complex)
+---
+
+<div class="bg-white p-6 rounded-lg">
+
+    <!-- Toolbar -->
+    <div class="mb-3">
+
+        <!-- Top toolbar -->
+        <div class="flex border border-zinc-300 bg-zinc-200 rounded-t-lg">
+            <!-- Inputs -->
+            <div class="flex flex-grow p-1 space-x-1">
+                <div class="relative flex">
+                    <i class="ri-search-line absolute top-1/2 -translate-y-1/2 left-3"></i>
+                    <input type="text" class="bg-white border border-zinc-300 rounded-md px-2 py-1 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 focus:ring-offset-1 min-w-52" placeholder="Search Table">
+                </div>
+                <div class="relative flex">
+                    <i class="ri-article-line absolute top-1/2 -translate-y-1/2 left-3"></i>
+                    <select class="bg-white border border-zinc-300 rounded-md px-10 py-2 text-sm text-zinc-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 focus:ring-offset-1 appearance-none min-w-52" required>
+                        <option value="" disabled selected>Choose a view</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                        <i class="ri-arrow-down-s-line text-zinc-400"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center p-2">
+                <button class="bg-primary hover:bg-primary-800 ml-3 px-3 py-2 rounded-md text-white tracking-wider uppercase text-xs">Edit Columns</button>
+            </div>
+        </div>
+
+        <!-- Bottom toolbar -->
+        <div class="flex bg-zinc-100 border border-t-0 border-zinc-300 rounded-b-lg">
+
+            <!-- Path/Breadcrumbs -->
+            <div class="flex flex-grow">
+                <div class="flex items-center p-2">
+                    <div class="group relative">
+                        <div class="absolute bg-zinc-800 bg-opacity-80 px-2 py-1 text-white left-1/2 -translate-x-1/2 bottom-full rounded-md mb-[2px] text-sm whitespace-nowrap hidden group-hover:block">
+                            Go up one level
+                        </div>
+                        <button class="text-secondary px-1 border border-zinc-300 rounded-md hover:bg-zinc-200 hover:text-secondary-800">
+                            <i class="ri-corner-left-up-line text-base"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <ol class="flex items-center whitespace-nowrap h-full">
+                    <li class="inline-flex items-center">
+                        <a class="flex items-center text-sm px-[6px] text-zinc-600 hover:text-secondary focus:outline-none focus:text-secondary"
+                            href="#">
+                            <i class="ri-folder-open-fill text-zinc-400 mr-2"></i>
+                            root
+                        </a>
+                        <i class="ri-arrow-right-s-line text-lg text-zinc-300"></i>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <a class="flex items-center text-sm px-[6px] text-zinc-600 hover:text-secondary focus:outline-none focus:text-secondary"
+                            href="#">
+                            <i class="ri-folder-6-line text-zinc-400 mr-2"></i>
+                            sample_directory
+                        </a>
+                        <i class="ri-arrow-right-s-line text-lg text-zinc-300"></i>
+                    </li>
+                    <li class="inline-flex items-center">
+                        <span class="text-sm px-[6px] font-semibold">
+                            current_directory
+                        </span>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Current Directory Information -->
+            <ul class="flex items-center">
+                <li class="flex items-baseline text-sm px-3 py-1">
+                    <i class="ri-folder-info-line text-base mr-1"></i>
+                    <span>
+                        0 <span class="text-xs text-zinc-400">folders</span>
+                    </span>
+                </li>
+                <li class="flex items-baseline text-sm px-3 py-1">
+                    <i class="ri-file-info-line text-base mr-1"></i>
+                    <span>
+                        99999 <span class="text-xs text-zinc-400">files</span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <table cellspacing="0" cellpadding="10" class="max-w-full text-sm text-gray-700 text-center" width="100%">
+        <thead class="border-b-2 border-zinc-200 tracking-wider text-zinc-500">
+            <tr>
+                <th scope="col">
+                    <label class="custom-checkbox font-normal -m-1">
+                        <input type="checkbox">
+                        <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                        <i class="ri-checkbox-fill icon icon-checked text-secondary mr-3 text-xl"></i>
+                    </label>
+                </th>
+                <th scope="col">Column Name</th>
+                <th scope="col">Column Name</th>
+                <th scope="col">Column Name</th>
+                <th scope="col">Column Name</th>
+                <th scope="col">Column Name</th>
+                <th scope="col">Column Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-zinc-200 hover:bg-zinc-100">
+                <td>
+                    <label class="custom-checkbox -m-1">
+                        <input type="checkbox">
+                        <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                        <i class="ri-checkbox-fill icon icon-checked text-secondary mr-3 text-xl"></i>
+                    </label>
+                </td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+                <td>Data</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="border-t border-zinc-200">
+            <tr>
+                <td colspan="7" class="p-4">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-zinc-500">Showing 1 to 10 of 200 entries</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                Previous
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                1
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                2
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                3
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                4
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                5
+                            </button>
+                            <span class="py-1 px-2 text-xs">
+                                ...
+                            </span>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                16
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                17
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                18
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                19
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                20
+                            </button>
+                            <button class="py-1 px-2 text-xs bg-white border border-zinc-200 uppercase tracking-wider rounded-md hover:bg-zinc-100">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+<style>
+    /* Use Remix Icons for checkboxes */
+    .custom-checkbox {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
+    .custom-checkbox input {
+        display: none;
+    }
+    .custom-checkbox .icon-unchecked {
+        display: inline;
+    }
+    .custom-checkbox .icon-checked {
+        display: none;
+    }
+    .custom-checkbox input:checked ~ .icon-unchecked {
+        display: none;
+    }
+    .custom-checkbox input:checked ~ .icon-checked {
+        display: inline;
+    }
+
+    /* Show default select option gray like a placeholder */
+    select:invalid {
+        color: #9ca3af !important; /* Tailwind's zinc-400 */
+    }
+</style>
