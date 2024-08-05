@@ -27,7 +27,14 @@ title: Table (Default)
 
         <!-- Actions -->
         <div class="flex items-center p-1">
-            <button class="bg-primary hover:bg-primary-800 ml-3 px-3 py-2 rounded-md text-white tracking-wider uppercase text-xs">Edit Columns</button>
+            <div class="group relative">
+                <div class="absolute bg-zinc-800 bg-opacity-80 px-2 py-1 text-white left-1/2 -translate-x-1/2 bottom-full rounded-md mb-[2px] text-sm whitespace-nowrap hidden group-hover:block">
+                    Edit Columns
+                </div>
+                <button class="hover:bg-zinc-300 px-2 py-1 rounded-md tracking-wider uppercase text-lg">
+                    <i class="ri-layout-column-line"></i>
+                </button>
+            </div>
         </div>
     </div>
 
