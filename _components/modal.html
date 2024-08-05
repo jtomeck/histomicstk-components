@@ -6,13 +6,13 @@ title: Modal
 <div id="modalOverlay" class="fixed inset-0 bg-zinc-900 bg-opacity-70 backdrop-filter backdrop-blur-sm z-40"></div>
 
 <!-- Modal -->
-<div id="modal" class="fixed inset-0 flex items-center justify-center z-50">
+<div id="modal" class="fixed inset-0 flex items-center justify-center text-sm z-50">
     <div class="bg-white flex flex-col h-full max-h-[calc(100vh-100px)] max-w-3xl overflow-hidden rounded-lg shadow-lg w-full">
         
         <!-- Top Bar -->
-        <div class="flex items-center px-4 py-2 bg-gray-200">
+        <div class="flex items-center px-3 py-2 bg-gray-200">
             <h4 class="font-semibold flex-1">Edit Columns</h4>
-            <div class="space-x-2 text-sm">
+            <div class="space-x-2 text-xs">
                 Advanced user? <a href="" class="text-secondary hover:text-secondary-500 hover:underline">Edit YAML</a>
             </div>
         </div>
@@ -21,14 +21,14 @@ title: Modal
         <div class="flex flex-col flex-grow overflow-hidden">
             
             <!-- Search Bar -->
-            <div id="searchSection" class="relative flex flex-col p-4 bg-primary shadow transition-all duration-300">
+            <div id="searchSection" class="relative flex flex-col p-3 bg-primary shadow transition-all duration-300">
                 <div class="flex items-center">
-                    <input id="searchInput" type="text" class="bg-white border border-zinc-200 rounded-md w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 focus:ring-offset-1" placeholder="Add a column type" onfocus="expandSearch()">
+                    <input id="searchInput" type="text" class="bg-white border border-zinc-200 rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 focus:ring-offset-1" placeholder="Add a column type" onfocus="expandSearch()">
                     <button id="closeSearchBtn" class="bg-primary-700 hover:bg-primary-600 ml-3 px-2 py-1 rounded-md text-white tracking-[1px] uppercase hidden" onclick="collapseSearch()">Done</button>
                 </div>
                 
                 <!-- Search Results -->
-                <div id="searchResults" class="bg-white rounded-md flex-grow overflow-hidden transition-all duration-300 mt-4 hidden">
+                <div id="searchResults" class="bg-white rounded-md flex-grow overflow-hidden transition-all duration-300 mt-3 hidden">
                     <ul class="h-full overflow-y-auto">
                         <!-- Example search results -->
                         <li class="border-b border-zinc-200">
@@ -90,8 +90,8 @@ title: Modal
             </div>
             
             <!-- Expandable List -->
-            <div id="expandableList" class="flex flex-col flex-grow p-4 bg-zinc-100 overflow-y-auto">
-                <ul class="space-y-2">
+            <div id="expandableList" class="flex flex-col flex-grow p-3 bg-zinc-100 overflow-y-auto">
+                <ul class="space-y-1">
                     <!-- Non-expandable items with lock icon -->
                     <li class="bg-white border border-zinc-200 flex flex-col items-stretch rounded-md">
                         <div class="flex items-center px-3 py-2 space-x-2 cursor-default">
@@ -130,7 +130,7 @@ title: Modal
             </div>
             
             <!-- Footer -->
-            <div class="bg-white border-t border-zinc-200 flex justify-end p-4 space-x-2">
+            <div class="bg-white border-t border-zinc-200 flex justify-end p-3 space-x-2">
                 <button class="bg-transparent hover:bg-zinc-100 px-3 py-2 rounded-md tracking-[1px] uppercase">Cancel</button>
                 <button class="bg-secondary hover:bg-secondary-500 px-3 py-2 rounded-md text-white tracking-[1px] uppercase">Save</button>
             </div>
