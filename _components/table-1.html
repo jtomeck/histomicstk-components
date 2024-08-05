@@ -1,22 +1,46 @@
 ---
-title: Table
+title: Table (Default)
 ---
 
 <div class="bg-white p-6 rounded-lg">
 
-    <div class="border border-zinc-200 bg-zinc-100 flex justify-between rounded-lg mb-3 overflow-hidden">
-        <div class="relative flex">
-            <i class="ri-search-line absolute top-1/2 -translate-y-1/2 left-3"></i>
-            <input type="text" class="bg-white border-r border-zinc-200 rounded-l-lg px-3 py-2 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 focus:ring-offset-1" placeholder="Search Columns">
+    <div class="border border-zinc-300 bg-zinc-200 flex justify-between rounded-lg mb-3 min-h-10">
+        <!-- Inputs -->
+        <div class="flex flex-grow p-1 space-x-1">
+            <div class="relative flex">
+                <i class="ri-search-line absolute top-1/2 -translate-y-1/2 left-0 pl-2"></i>
+                <input type="text" class="bg-white border border-zinc-300 rounded-md px-1 pl-8 text-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 focus:ring-offset-1 min-w-52" placeholder="Search Table">
+            </div>
+            <div class="relative flex">
+                <i class="ri-article-line absolute top-1/2 -translate-y-1/2 left-0 pl-2"></i>
+                <select class="bg-white border border-zinc-300 rounded-md px-8 px-1 text-sm text-zinc-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 focus:ring-offset-1 appearance-none min-w-52" required>
+                    <option value="" disabled selected>Choose a view</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                    <i class="ri-arrow-down-s-line text-zinc-400"></i>
+                </div>
+            </div>
         </div>
-        <div class="flex items-center p-2">
-            <button class="bg-primary hover:bg-primary-800 ml-3 px-2 py-1 rounded-md text-white tracking-wider uppercase text-xs">Edit Columns</button>
+
+        <!-- Actions -->
+        <div class="flex items-center p-1">
+            <div class="group relative">
+                <div class="absolute bg-zinc-800 bg-opacity-80 px-2 py-1 text-white left-1/2 -translate-x-1/2 bottom-full rounded-md mb-[2px] text-sm whitespace-nowrap hidden group-hover:block">
+                    Edit Columns
+                </div>
+                <button class="hover:bg-zinc-300 px-2 py-1 rounded-md tracking-wider uppercase text-lg">
+                    <i class="ri-layout-column-line"></i>
+                </button>
+            </div>
         </div>
     </div>
 
     <table cellspacing="0" cellpadding="10" class="max-w-full text-sm text-gray-700 text-center"
         width="100%">
-        <thead class="border-b-2 border-zinc-200 tracking-wider uppercase">
+        <thead class="border-b-2 border-zinc-200 tracking-wider text-zinc-500">
             <tr>
                 <th scope="col"></th>
                 <th scope="col">Column Name</th>
@@ -29,7 +53,7 @@ title: Table
         </thead>
         <tbody>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -38,7 +62,7 @@ title: Table
                 <td>Data</td>
             </tr>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -47,7 +71,7 @@ title: Table
                 <td>Data</td>
             </tr>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -56,7 +80,7 @@ title: Table
                 <td>Data</td>
             </tr>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -65,7 +89,7 @@ title: Table
                 <td>Data</td>
             </tr>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -74,7 +98,7 @@ title: Table
                 <td>Data</td>
             </tr>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -83,7 +107,7 @@ title: Table
                 <td>Data</td>
             </tr>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -92,7 +116,7 @@ title: Table
                 <td>Data</td>
             </tr>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -101,7 +125,7 @@ title: Table
                 <td>Data</td>
             </tr>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -110,7 +134,7 @@ title: Table
                 <td>Data</td>
             </tr>
             <tr class="border-b border-zinc-200 hover:bg-zinc-100">
-                <th class="tracking-wider uppercase" scope="row">Row Name</th>
+                <th class="tracking-wider text-zinc-500" scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
