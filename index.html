@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+
+<!-- Theme Setup -->
+
+<!-- Components List -->
 <div class="flex">
     <nav class="p-8 w-1/5">
         <h4 class="text-lg font-semibold mb-6">Tailwind Components</h4>
@@ -9,12 +13,12 @@ layout: default
     <div class="p-8 w-4/5">
             {% for component in site.components %}
             <div id="{{ component.slug }}" class="mb-8 w-full">
-                <h2 class="text-2xl font-semibold mb-2">{{ component.title }}</h2>
+                <h4 class="text-lg font-semibold mb-2">{{ component.title }}</h4>
                 <div class="component-container">
                     <!-- NOTE: .component needs to be single line or indentation in the code preview will appear broken -->
                     {% if component.description %}
                         <div class="component-desc flex items-center justify-center">
-                            <i class="ri-information-line text-2xl text-blue-500 mr-3"></i>
+                            <i class="ri-information-line text-2xl text-secondary mr-3"></i>
                             {{ component.description }}
                         </div>
                         <!-- NOTE: Component description is for when a component has no display (like config code or similar), but the .component div still needs to be there. This is why it is there and has the .hidden class -->
@@ -24,8 +28,8 @@ layout: default
                     {% endif %}
                     <div class="bg-zinc-200 rounded-b-lg p-2">
                         <div class="flex justify-end space-x-2">
-                            <button class="copy-code bg-emerald-500 text-white font-semibold px-3 py-2 rounded uppercase tracking-[1px] text-sm hidden">Copy Code</button>
-                            <button class="toggle-code bg-zinc-100 text-zinc-600 font-semibold px-3 py-2 rounded uppercase tracking-[1px] text-sm">Show Code</button>
+                            <button class="copy-code bg-secondary hover:bg-secondary-500 text-white px-3 py-2 rounded-md uppercase tracking-wider hidden">Copy Code</button>
+                            <button class="toggle-code bg-primary hover:bg-primary-800 text-white px-3 py-2 rounded-md uppercase tracking-wider">Show Code</button>
                         </div>
                         <pre class="component-code bg-zinc-700 overflow-x-auto text-zinc-200 px-6 py-4 rounded mt-2 hidden w-full"></pre>
                     </div>
