@@ -3,69 +3,33 @@
         theme: {
             extend: {
                 colors: {
-                    'primary': {
-                        '50': '#eff2fe',
-                        '100': '#e3e6fc',
-                        '200': '#ccd1f9',
-                        '300': '#acb3f5',
-                        '400': '#8b8bee',
-                        '500': '#776fe5',
-                        '600': '#6753d8',
-                        '700': '#5844be',
-                        '800': '#473a99',
-                        '900': '#3d357a', /* main */
-                        '950': '#251f47',
+                    primary: {
+                        DEFAULT: 'hsla(var(--primary-h), var(--primary-s), var(--primary-l), 1)',
+                        light: 'hsla(var(--primary-h), calc(var(--primary-s) - 12%), calc(var(--primary-l) + 58%), 1)',
+                        hover: 'hsla(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 12%), 1)',
+                        'light-hover': 'hsla(var(--primary-h), calc(var(--primary-s) - 12%), calc(var(--primary-l) + 52%), 1)',
+                        content: 'hsla(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 70%), 1)',
+                        'light-content': 'hsla(var(--primary-h), var(--primary-s), var(--primary-l), 1)',
                     },
-                    'secondary': {
-                        '50': '#eefdfd',
-                        '100': '#d4f9f9',
-                        '200': '#aef2f3',
-                        '300': '#76e6ea',
-                        '400': '#37d1d9',
-                        '500': '#1bb4bf',
-                        '600': '#1b9aaa', /* main */
-                        '700': '#1b7583',
-                        '800': '#1f5f6b',
-                        '900': '#1e4f5b',
-                        '950': '#0e343e',
+                    secondary: {
+                        DEFAULT: 'hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), 1)',
+                        light: 'hsla(var(--secondary-h), calc(var(--secondary-s) - 25%), calc(var(--secondary-l) + 52%), 1)',
+                        hover: 'hsla(var(--secondary-h), calc(var(--secondary-s) - 15%), calc(var(--secondary-l) + 9%), 1)',
+                        'light-hover': 'hsla(var(--secondary-h), calc(var(--secondary-s) - 25%), calc(var(--secondary-l) + 45%), 1)',
+                        content: 'hsla(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) + 70%), 1)',
+                        'light-content': 'hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), 1)',
                     },
-                    'accent': {
-                        '50': '#fafaec',
-                        '100': '#f2f3ce',
-                        '200': '#e8e7a0',
-                        '300': '#dbd56e', /* main */
-                        '400': '#cec141',
-                        '500': '#bfac33',
-                        '600': '#a48a2a',
-                        '700': '#836725',
-                        '800': '#6e5425',
-                        '900': '#5f4624',
-                        '950': '#362612',
+                    accent: {
+                        DEFAULT: 'hsla(var(--accent-h), var(--accent-s), var(--accent-l), 1)',
+                        light: 'hsla(var(--accent-h), calc(var(--accent-s) - 15%), calc(var(--accent-l) + 24%), 1)',
+                        hover: 'hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 10%), 1)',
+                        'light-hover': 'hsla(var(--accent-h), calc(var(--accent-s) - 15%), calc(var(--accent-l) + 16%), 1)',
+                        content: 'hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 40%), 1)',
+                        'light-content': 'hsla(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 25%), 1)',
                     },
                 },
-
-                fontFamily: {
-                    sans: ['Roboto', 'sans-serif'],
-                },
-            }
+            },
         },
-        plugins: [
-            /* Use specific colors as primary, secondary and accent without losing the ability to use all 100-950 shades */
-            function ({ addUtilities, theme }) {
-                const colors = theme('colors');
-                const primaryColor = colors.primary['900'];
-                const secondaryColor = colors.secondary['600'];
-                const accentColor = colors.accent['300'];
-
-                addUtilities({
-                    '.bg-primary': { backgroundColor: primaryColor },
-                    '.text-primary': { color: primaryColor },
-                    '.bg-secondary': { backgroundColor: secondaryColor },
-                    '.text-secondary': { color: secondaryColor },
-                    '.bg-accent': { backgroundColor: accentColor },
-                    '.text-accent': { color: accentColor },
-                }, ['responsive', 'hover']);
-            }
-        ],
+        plugins: [],
     }
 </script>
