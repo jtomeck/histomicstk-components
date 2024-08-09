@@ -3,7 +3,7 @@ title: Modal
 ---
 
 <!-- Modal Background Overlay -->
-<div id="modalOverlay" class="fixed inset-0 bg-zinc-900 bg-opacity-70 backdrop-filter backdrop-blur-sm z-40"></div>
+<div id="modalOverlay" class="fixed inset-0 bg-neutral-900 bg-opacity-70 backdrop-filter backdrop-blur-sm z-40"></div>
 
 <!-- Modal -->
 <div id="modal" class="fixed inset-0 flex items-center justify-center text-sm z-50">
@@ -23,63 +23,63 @@ title: Modal
             <!-- Search Bar -->
             <div id="searchSection" class="relative flex flex-col p-3 bg-primary shadow-md transition-all duration-300">
                 <div class="flex items-center">
-                    <input id="searchInput" type="text" class="bg-white border border-zinc-200 rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-600 focus:ring-offset-1" placeholder="Add a column type" onfocus="expandSearch()">
-                    <button id="closeSearchBtn" class="bg-primary-700 hover:bg-primary-600 ml-3 px-2 py-1 rounded-md text-white tracking-[1px] uppercase hidden" onclick="collapseSearch()">Done</button>
+                    <input id="searchInput" type="text" class="bg-white border border-neutral-200 rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-1" placeholder="Add a column type" onfocus="expandSearch()">
+                    <button id="closeSearchBtn" class="htk-btn htk-btn-xs htk-btn-secondary ml-3 hidden" onclick="collapseSearch()">Done</button>
                 </div>
                 
                 <!-- Search Results -->
                 <div id="searchResults" class="bg-white rounded-md flex-grow overflow-hidden transition-all duration-300 mt-3 hidden">
                     <ul class="h-full overflow-y-auto">
                         <!-- Example search results -->
-                        <li class="border-b border-zinc-200">
+                        <li class="border-b border-neutral-200">
                             <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
                         </li>
                         
-                        <li class="border-b border-zinc-200">
+                        <li class="border-b border-neutral-200">
                             <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
                         </li>
                         
-                        <li class="border-b border-zinc-200">
+                        <li class="border-b border-neutral-200">
                             <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
                         </li>
                         
-                        <li class="border-b border-zinc-200">
+                        <li class="border-b border-neutral-200">
                             <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
                         </li>
                         
-                        <li class="border-b border-zinc-200">
+                        <li class="border-b border-neutral-200">
                             <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
                         </li>
                         
-                        <li class="border-b border-zinc-200">
+                        <li class="border-b border-neutral-200">
                             <label class="custom-checkbox px-3 py-2 w-full">
                                 <input type="checkbox">
-                                <i class="ri-checkbox-blank-line icon icon-unchecked text-zinc-500 mr-3 text-xl"></i>
+                                <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 mr-3 text-xl"></i>
                                 <i class="ri-checkbox-fill icon icon-checked text-secondary mr-3 text-xl"></i>
                                 Checkbox text
                             </label>
@@ -90,34 +90,34 @@ title: Modal
             </div>
             
             <!-- Expandable List -->
-            <div id="expandableList" class="flex flex-col flex-grow p-3 bg-zinc-100 overflow-y-auto shadow-[inset_0_-4px_6px_-2px_rgba(0,0,0,0.05)]">
+            <div id="expandableList" class="flex flex-col flex-grow p-3 bg-neutral-100 overflow-y-auto shadow-[inset_0_-4px_6px_-2px_rgba(0,0,0,0.05)]">
                 <ul class="space-y-1">
                     <!-- Non-expandable items with lock icon -->
-                    <li class="bg-white border border-zinc-200 flex flex-col items-stretch rounded-md">
+                    <li class="bg-white border border-neutral-200 flex flex-col items-stretch rounded-md">
                         <div class="flex items-center px-2 py-1 space-x-2 cursor-default">
-                            <i class="ri-draggable text-lg text-zinc-500"></i>
-                            <span class="flex-1 text-zinc-400">Name</span>
-                            <i class="ri-lock-line text-lg text-zinc-500"></i>
+                            <i class="ri-draggable text-lg text-neutral-500"></i>
+                            <span class="flex-1 text-neutral-400">Name</span>
+                            <i class="ri-lock-line text-lg text-neutral-500"></i>
                         </div>
                     </li>
-                    <li class="bg-white border border-zinc-200 flex flex-col items-stretch rounded-md">
+                    <li class="bg-white border border-neutral-200 flex flex-col items-stretch rounded-md">
                         <div class="flex items-center px-2 py-1 space-x-2 cursor-default">
-                            <i class="ri-draggable text-lg text-zinc-500"></i>
-                            <span class="flex-1 text-zinc-400">Size</span>
-                            <i class="ri-lock-line text-lg text-zinc-500"></i>
+                            <i class="ri-draggable text-lg text-neutral-500"></i>
+                            <span class="flex-1 text-neutral-400">Size</span>
+                            <i class="ri-lock-line text-lg text-neutral-500"></i>
                         </div>
                     </li>
                     <!-- Expandable items with chevron icon -->
-                    <li class="bg-white border border-zinc-200 flex flex-col group items-stretch rounded-md">
+                    <li class="bg-white border border-neutral-200 flex flex-col group items-stretch rounded-md">
                         <div class="flex items-center px-2 py-1 space-x-2 cursor-pointer" onclick="toggleExpand(this)">
-                            <i class="ri-draggable text-lg text-zinc-500"></i>
+                            <i class="ri-draggable text-lg text-neutral-500"></i>
                             <span class="flex-1">Stain</span>
-                            <div class="border-r border-zinc-200 hidden px-3 group-hover:block">
-                                <button class="hover:bg-zinc-100 flex items-center justify-center rounded-full w-6 h-6">
-                                    <i class="ri-delete-bin-2-fill text-zinc-600 text-lg"></i>
+                            <div class="border-r border-neutral-200 hidden px-3 group-hover:block">
+                                <button class="htk-btn htk-btn-ghost htk-btn-xs htk-btn-icon">
+                                    <i class="ri-delete-bin-2-fill"></i>
                                 </button>
                             </div>
-                            <i class="ri-arrow-down-s-line text-lg text-zinc-500 rotate-0 transition-transform duration-300"></i>
+                            <i class="ri-arrow-down-s-line text-lg text-neutral-500 rotate-0 transition-transform duration-300"></i>
                         </div>
                         <div class="expandable-content overflow-hidden max-h-0 transition-all duration-300">
                             <div class="p-3">
@@ -130,37 +130,15 @@ title: Modal
             </div>
             
             <!-- Footer -->
-            <div class="bg-white border-t border-zinc-200 flex justify-end p-3 space-x-2">
-                <button class="bg-transparent hover:bg-zinc-100 px-3 py-2 rounded-md tracking-[1px] uppercase">Cancel</button>
-                <button class="bg-primary hover:bg-primary-800 px-3 py-2 rounded-md text-white tracking-[1px] uppercase">Save</button>
+            <div class="bg-white border-t border-neutral-200 flex justify-end p-3 space-x-2">
+                <button class="htk-btn htk-btn-ghost">Cancel</button>
+                <button class="htk-btn htk-btn-primary">Save</button>
             </div>
         </div>
     </div>
 </div>
 
 <style>
-    /* Use Remix Icons for checkboxes */
-    .custom-checkbox {
-        display: inline-flex;
-        align-items: center;
-        cursor: pointer;
-        user-select: none;
-    }
-    .custom-checkbox input {
-        display: none;
-    }
-    .custom-checkbox .icon-unchecked {
-        display: inline;
-    }
-    .custom-checkbox .icon-checked {
-        display: none;
-    }
-    .custom-checkbox input:checked ~ .icon-unchecked {
-        display: none;
-    }
-    .custom-checkbox input:checked ~ .icon-checked {
-        display: inline;
-    }
     
     /* Styles to handle the search bar expansion */
     #searchResults.hidden {
