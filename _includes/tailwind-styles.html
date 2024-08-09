@@ -147,11 +147,8 @@
         /* b. Icon Only */
 
         .htk-btn.htk-btn-icon {
-            @apply rounded-full !leading-none text-xl w-9 aspect-square;
-        }
-
-        .htk-btn > i {
-            @apply !aspect-square;
+            /* "tracking-[0]" ensures icons are always centered when using icon fonts */
+            @apply rounded-full !leading-none text-xl w-9 aspect-square tracking-[0];
         }
 
         /* Large */
@@ -163,13 +160,13 @@
         /* Small */
 
         .htk-btn.htk-btn-icon.htk-btn-sm {
-            @apply text-base w-[30px];
+            @apply text-lg w-[30px];
         }
 
         /* X-Small */
 
         .htk-btn.htk-btn-icon.htk-btn-xs {
-            @apply text-sm w-[22px];
+            @apply text-base w-[22px];
         }
 
     }
