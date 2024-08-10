@@ -1,24 +1,12 @@
 <style type="text/tailwindcss">
 
     @layer base {
-
         :root {
-            /* Primary Color Variables */
-            --primary-h: 247;
-            --primary-s: 39%;
-            --primary-l: 34%;
-
-            /* Secondary Color Variables */
-            --secondary-h: 187;
-            --secondary-s: 73%;
-            --secondary-l: 39%;
-
-            /* Accent Color Variables */
-            --accent-h: 57;
-            --accent-s: 60%;
-            --accent-l: 65%;
+            /* User-defined hex values */
+            --primary: #3d357a;
+            --secondary: #1b9aaa;
+            --accent: #dbd56e;
         }
-
     }
 
     @layer components {
@@ -57,14 +45,6 @@
         .htk-btn.htk-btn-primary:hover {
             @apply bg-primary-hover;
         }
-
-        .htk-btn.htk-btn-primary-light {
-            @apply bg-primary-light text-primary-light-content;
-        }
-
-        .htk-btn.htk-btn-primary-light:hover {
-            @apply bg-primary-light-hover;
-        }
         
         .htk-btn.htk-btn-secondary {
             @apply bg-secondary text-secondary-content;
@@ -74,28 +54,12 @@
             @apply bg-secondary-hover;
         }
 
-        .htk-btn.htk-btn-secondary-light {
-            @apply bg-secondary-light text-secondary-light-content;
-        }
-
-        .htk-btn.htk-btn-secondary-light:hover {
-            @apply bg-secondary-light-hover;
-        }
-
         .htk-btn.htk-btn-accent {
             @apply bg-accent text-accent-content;
         }
 
         .htk-btn.htk-btn-accent:hover {
             @apply bg-accent-hover;
-        }
-
-        .htk-btn.htk-btn-accent-light {
-            @apply bg-accent-light text-accent-light-content;
-        }
-
-        .htk-btn.htk-btn-accent-light:hover {
-            @apply bg-accent-light-hover;
         }
 
         /* 3. Types
