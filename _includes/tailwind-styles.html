@@ -19,9 +19,12 @@
         */
 
         .htk-btn {
-            @apply duration-200 ease-in-out inline-flex items-center justify-center px-3 py-[6px] rounded-md text-base tracking-wider transition-all space-x-2 h-9;
+            @apply duration-200 ease-in-out inline-flex items-center justify-center px-3 py-[6px] rounded-md text-base tracking-wider transition-all gap-2 h-9;
         }
 
+        .htk-btn i {
+            @apply leading-[0];
+        }
         /* 1. Sizes */
 
         .htk-btn.htk-btn-lg {
@@ -29,11 +32,11 @@
         }
 
         .htk-btn.htk-btn-sm {
-            @apply px-[10px] text-sm h-[30px];
+            @apply px-[10px] text-sm h-[30px] gap-1;
         }
 
         .htk-btn.htk-btn-xs {
-            @apply px-[7px] rounded text-xs h-[22px];
+            @apply px-[7px] rounded text-xs h-[22px] gap-1;
         }
 
         /* 2. Colors */
