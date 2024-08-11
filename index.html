@@ -5,8 +5,8 @@ layout: default
 <div class="p-8">
     <h1 class="mb-8">Components Setup</h1>
     <div class="flex space-x-4 w-full">
-        <div class="w-1/2">
-            <div class="component-container">
+        <div class="w-1/2 space-y-4">
+            <div class="component-container bg-white border border-neutral-200 p-4 rounded-md">
                 <div class="pb-4">
                     <h4 class="mb-2">Tailwind Config</h4>
                     The tailwind config should be included in the <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">&lt;head&gt;</code> of your website. The Tailwind Play CDN is included here as well because needs to be included before the config. Nothing needs to be edited since the colors are defined as variables in the CSS, which is where you will input your own hex color values.
@@ -18,7 +18,7 @@ layout: default
                 </div>
             </div>
 
-            <div class="component-container">
+            <div class="component-container bg-white border border-neutral-200 p-4 rounded-md">
                 <div class="pb-4">
                     <h4 class="mb-2">Styles</h4>
                     These styles should be included in the <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">&lt;head&gt;</code> as well <strong>after the tailwind config</strong>. As mentioned, the color variables <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">--primary</code>, <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">--secondary</code> and <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">--accent</code> are defined here. Input your own colors and your theming work is done.
@@ -30,7 +30,7 @@ layout: default
                 </div>
             </div>
 
-            <div class="component-container">
+            <div class="component-container bg-white border border-neutral-200 p-4 rounded-md">
                 <div class="pb-4">
                     <h4 class="mb-2">Automatic Color Generation</h4>
                     This script does a bunch of magic that takes the hex values you input into the css color variables, converts them to HSL (hue, saturation, lightness) colors and automatically calculates legible content colors, hover states, etc. It should be included before the closing <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">&lt;/body&gt;</code> tag of your website. It shouldn't be needed, but if there is any strange color loading behavior you can defer the script like so: <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">&lt;script type="text/javascript" defer&gt;</code>
