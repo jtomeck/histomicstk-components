@@ -34,12 +34,12 @@ $(document).ready(function() {
         // Copy code to clipboard
         $copyCodeButton.on('click', function() {
             navigator.clipboard.writeText($codeBlock.text())
-                .then(function() {
-                    $copyCodeButton.text('Copied!');
-                    setTimeout(function() {
-                        $copyCodeButton.text('Copy Code');
-                    }, 2000);
-                });
+            .then(function() {
+                $copyCodeButton.text('Copied!');
+                setTimeout(function() {
+                    $copyCodeButton.text('Copy Code');
+                }, 2000);
+            });
         });
     });
 });
