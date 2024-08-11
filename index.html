@@ -12,7 +12,7 @@ layout: default
                     The tailwind config should be included in the <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">&lt;head&gt;</code> of your website. The Tailwind Play CDN is included here as well because needs to be included before the config. Nothing needs to be edited since the colors are defined as variables in the CSS, which is where you will input your own hex color values.
                 </div>
                 <div class="component hidden">{% include tailwind-config.html %}</div>
-                <pre class="component-code bg-neutral-700 !block overflow-x-auto text-neutral-200 px-6 py-4 rounded my-2 w-full max-h-72"></pre>
+                <pre class="component-code bg-neutral-700 !block overflow-x-auto text-neutral-200 px-6 py-4 rounded my-2 w-full max-h-48"></pre>
                 <div class="flex justify-end space-x-2">
                     <button class="copy-code htk-btn htk-btn-secondary htk-btn-sm">Copy Code</button>
                 </div>
@@ -24,7 +24,7 @@ layout: default
                     These styles should be included in the <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">&lt;head&gt;</code> as well <strong>after the tailwind config</strong>. As mentioned, the color variables <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">--primary</code>, <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">--secondary</code> and <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">--accent</code> are defined here. Input your own colors and your theming work is done.
                 </div>
                 <div class="component hidden">{% include tailwind-styles.html %}</div>
-                <pre class="component-code bg-neutral-700 !block overflow-x-auto text-neutral-200 px-6 py-4 rounded my-2 w-full max-h-72"></pre>
+                <pre class="component-code bg-neutral-700 !block overflow-x-auto text-neutral-200 px-6 py-4 rounded my-2 w-full max-h-48"></pre>
                 <div class="flex justify-end space-x-2">
                     <button class="copy-code htk-btn htk-btn-secondary htk-btn-sm">Copy Code</button>
                 </div>
@@ -36,7 +36,7 @@ layout: default
                     This script does a bunch of magic that takes the hex values you input into the css color variables, converts them to HSL (hue, saturation, lightness) colors and automatically calculates legible content colors, hover states, etc. It should be included before the closing <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">&lt;/body&gt;</code> tag of your website. It shouldn't be needed, but if there is any strange color loading behavior you can defer the script like so: <code class="font-mono bg-pink-100 rounded-lg px-1 text-pink-500 whitespace-nowrap">&lt;script type="text/javascript" defer&gt;</code>
                 </div>
                 <div class="component hidden">{% include colorgen-script.html %}</div>
-                <pre class="component-code bg-neutral-700 !block overflow-x-auto text-neutral-200 px-6 py-4 rounded my-2 w-full max-h-72"></pre>
+                <pre class="component-code bg-neutral-700 !block overflow-x-auto text-neutral-200 px-6 py-4 rounded my-2 w-full max-h-48"></pre>
                 <div class="flex justify-end space-x-2">
                     <button class="copy-code htk-btn htk-btn-secondary htk-btn-sm">Copy Code</button>
                 </div>
