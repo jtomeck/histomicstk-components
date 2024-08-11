@@ -15,13 +15,13 @@ layout: default
 <!-- Components List -->
 <div class="flex">
     <nav class="p-8 w-1/5">
-        <h4 class="text-lg font-semibold mb-6">Tailwind Components</h4>
+        <h4 class="mb-6">Tailwind Components</h4>
         {% include components-nav.html %}
     </nav>
     <div class="p-8 w-4/5">
-            {% for component in site.components %}
+        {% for component in site.components %}
             <div id="{{ component.slug }}" class="mb-8 w-full">
-                <h4 class="text-lg font-semibold mb-2">{{ component.title }}</h4>
+                <h4 class="mb-2">{{ component.title }}</h4>
                 <div class="component-container">
                     <!-- NOTE: .component needs to be single line or indentation in the code preview will appear broken -->
                     {% if component.description %}
