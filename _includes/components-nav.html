@@ -1,8 +1,17 @@
 
     <ul class="space-y-2 !m-0">
-        {% for component in site.components %}
         <li>
-            <a href="#{{ component.slug }}" class="htk-btn htk-btn-secondary htk-btn-ghost htk-btn-sm w-full block">{{ component.title }}</a>
+            <a href="#setup" class="htk-btn htk-btn-secondary htk-btn-ghost htk-btn-sm w-full block">Setup</a>
         </li>
-        {% endfor %}
+        <li>
+            <a href="#components" class="htk-btn htk-btn-secondary htk-btn-ghost htk-btn-sm w-full block">Components</a>
+        </li>
+        <ul>
+            {% for component in site.components %}
+            <li class="flex items-center space-x-1 pl-2">
+                <i class="ri-corner-down-right-line text-lg text-neutral-400"></i>
+                <a href="#{{ component.slug }}" class="htk-btn htk-btn-secondary htk-btn-ghost htk-btn-sm w-full block">{{ component.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
     </ul>
