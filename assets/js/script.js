@@ -1,4 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function() { 
+
+    // Component Code Toggle and Copy Code
     $('.component-container').each(function() {
         const $container = $(this);
         const $codeBlock = $container.find('.component-code');
@@ -32,12 +34,12 @@ $(document).ready(function() {
         // Copy code to clipboard
         $copyCodeButton.on('click', function() {
             navigator.clipboard.writeText($codeBlock.text())
-                .then(function() {
-                    $copyCodeButton.text('Copied!');
-                    setTimeout(function() {
-                        $copyCodeButton.text('Copy Code');
-                    }, 2000);
-                });
+            .then(function() {
+                $copyCodeButton.text('Copied!');
+                setTimeout(function() {
+                    $copyCodeButton.text('Copy Code');
+                }, 2000);
+            });
         });
     });
 });
