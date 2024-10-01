@@ -148,10 +148,10 @@ title: Table (Complex)
         <thead class="border-b-2 border-neutral-200 tracking-wider text-neutral-500">
             <tr>
                 <th scope="col">
-                    <label class="custom-checkbox font-normal -m-1">
+                    <label class="htk-checkbox font-normal -m-1">
                         <input type="checkbox">
-                        <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 text-xl"></i>
-                        <i class="ri-checkbox-fill icon icon-checked text-secondary text-xl"></i>
+                        <i class="ri-checkbox-blank-line icon htk-icon-unchecked text-neutral-500 text-xl"></i>
+                        <i class="ri-checkbox-fill icon htk-icon-checked text-secondary text-xl"></i>
                     </label>
                 </th>
                 <th scope="col">Image</th>
@@ -163,10 +163,10 @@ title: Table (Complex)
         <tbody>
             <tr class="border-b border-neutral-200 hover:bg-neutral-100">
                 <td>
-                    <label class="custom-checkbox -m-1">
+                    <label class="htk-checkbox -m-1">
                         <input type="checkbox">
-                        <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 text-xl"></i>
-                        <i class="ri-checkbox-fill icon icon-checked text-secondary text-xl"></i>
+                        <i class="ri-checkbox-blank-line icon htk-icon-unchecked text-neutral-500 text-xl"></i>
+                        <i class="ri-checkbox-fill icon htk-icon-checked text-secondary text-xl"></i>
                     </label>
                 </td>
                 <td>
@@ -208,10 +208,10 @@ title: Table (Complex)
 
             <tr class="border-b border-neutral-200 hover:bg-neutral-100">
                 <td>
-                    <label class="custom-checkbox -m-1">
+                    <label class="htk-checkbox -m-1">
                         <input type="checkbox">
-                        <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 text-xl"></i>
-                        <i class="ri-checkbox-fill icon icon-checked text-secondary text-xl"></i>
+                        <i class="ri-checkbox-blank-line icon htk-icon-unchecked text-neutral-500 text-xl"></i>
+                        <i class="ri-checkbox-fill icon htk-icon-checked text-secondary text-xl"></i>
                     </label>
                 </td>
                 <td>
@@ -253,10 +253,10 @@ title: Table (Complex)
 
             <tr class="border-b border-neutral-200 hover:bg-neutral-100">
                 <td>
-                    <label class="custom-checkbox -m-1">
+                    <label class="htk-checkbox -m-1">
                         <input type="checkbox">
-                        <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 text-xl"></i>
-                        <i class="ri-checkbox-fill icon icon-checked text-secondary text-xl"></i>
+                        <i class="ri-checkbox-blank-line icon htk-icon-unchecked text-neutral-500 text-xl"></i>
+                        <i class="ri-checkbox-fill icon htk-icon-checked text-secondary text-xl"></i>
                     </label>
                 </td>
                 <td>
@@ -298,10 +298,10 @@ title: Table (Complex)
 
             <tr class="border-b border-neutral-200 hover:bg-neutral-100">
                 <td>
-                    <label class="custom-checkbox -m-1">
+                    <label class="htk-checkbox -m-1">
                         <input type="checkbox">
-                        <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 text-xl"></i>
-                        <i class="ri-checkbox-fill icon icon-checked text-secondary text-xl"></i>
+                        <i class="ri-checkbox-blank-line icon htk-icon-unchecked text-neutral-500 text-xl"></i>
+                        <i class="ri-checkbox-fill icon htk-icon-checked text-secondary text-xl"></i>
                     </label>
                 </td>
                 <td>
@@ -343,10 +343,10 @@ title: Table (Complex)
 
             <tr class="border-b border-neutral-200 hover:bg-neutral-100">
                 <td>
-                    <label class="custom-checkbox -m-1">
+                    <label class="htk-checkbox -m-1">
                         <input type="checkbox">
-                        <i class="ri-checkbox-blank-line icon icon-unchecked text-neutral-500 text-xl"></i>
-                        <i class="ri-checkbox-fill icon icon-checked text-secondary text-xl"></i>
+                        <i class="ri-checkbox-blank-line icon htk-icon-unchecked text-neutral-500 text-xl"></i>
+                        <i class="ri-checkbox-fill icon htk-icon-checked text-secondary text-xl"></i>
                     </label>
                 </td>
                 <td>
@@ -442,33 +442,3 @@ title: Table (Complex)
     </table>
 
 </div>
-
-<style>
-    /* Use Remix Icons for checkboxes */
-    .custom-checkbox {
-        display: inline-flex;
-        align-items: center;
-        cursor: pointer;
-        user-select: none;
-    }
-    .custom-checkbox input {
-        display: none;
-    }
-    .custom-checkbox .icon-unchecked {
-        display: inline;
-    }
-    .custom-checkbox .icon-checked {
-        display: none;
-    }
-    .custom-checkbox input:checked ~ .icon-unchecked {
-        display: none;
-    }
-    .custom-checkbox input:checked ~ .icon-checked {
-        display: inline;
-    }
-
-    /* Show default select option gray like a placeholder */
-    select:invalid {
-        color: #9ca3af !important; /* Tailwind's neutral-400 */
-    }
-</style>
