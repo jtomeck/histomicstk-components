@@ -174,5 +174,49 @@
         .htk-btn.htk-btn-disabled {
             @apply bg-neutral-200 border border-neutral-300 text-neutral-400 !cursor-not-allowed;
         }
+
+        /*
+        Define Form Elements
+        */
+
+        /* Use Remix Icons for checkboxes & radio buttons */
+        .htk-checkbox,
+        .htk-radio {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .htk-checkbox input,
+        .htk-radio input {
+            display: none;
+        }
+
+        .htk-checkbox .htk-icon-unchecked,
+        .htk-radio .htk-icon-unchecked {
+            display: inline;
+        }
+
+        .htk-checkbox .htk-icon-checked,
+        .htk-radio .htk-icon-checked {
+            display: none;
+        }
+
+        .htk-checkbox input:checked ~ .htk-icon-unchecked,
+        .htk-radio input:checked ~ .htk-icon-unchecked {
+            display: none;
+        }
+
+        .htk-checkbox input:checked ~ .htk-icon-checked,
+        .htk-radio input:checked ~ .htk-icon-checked {
+            display: inline;
+        }
+
+
+        /* Show default select option gray like a placeholder */
+        select:invalid {
+            color: #9ca3af !important; /* Tailwind's neutral-400 */
+        }
     }
 </style>
