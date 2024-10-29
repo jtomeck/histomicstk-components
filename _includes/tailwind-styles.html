@@ -218,5 +218,39 @@
         select:invalid {
             color: #9ca3af !important; /* Tailwind's neutral-400 */
         }
+
+        /*
+        Define Tooltips
+        */
+
+        .htk-tooltip-group {
+            @apply relative max-w-max max-h-max;
+        }
+
+        .htk-tooltip-group .htk-tooltip {
+            @apply absolute bg-neutral-800 bg-opacity-80 px-2 py-1 text-white rounded-md text-sm whitespace-nowrap hidden z-[999];
+        }
+
+        .htk-tooltip-group:hover .htk-tooltip {
+            @apply block;
+        }
+
+        .htk-tooltip-top {
+            @apply bottom-full mb-[2px] left-1/2 -translate-x-1/2;
+        }
+
+        .htk-tooltip-bottom {
+            @apply top-full mt-[2px] left-1/2 -translate-x-1/2;
+        }
+
+        .htk-tooltip-left {
+            @apply right-full mr-[2px] top-1/2 -translate-y-1/2;
+        }
+
+        .htk-tooltip-right {
+            @apply left-full ml-[2px] top-1/2 -translate-y-1/2;
+        }
+
+
     }
 </style>
