@@ -252,7 +252,7 @@
         }
 
         /*
-        Define Form Elements
+        Define List Elements
         */
 
         .htk-list {
@@ -272,9 +272,24 @@
             @apply py-1;
         }
 
-        .htk-list-item i {
+        .htk-list-item > i {
             @apply mr-2 text-lg text-neutral-500;
         }
 
+        .htk-list-item .htk-list-item-name {
+            @apply flex-1;
+        }
+
+        .htk-list-item .htk-list-item-info {
+            @apply pr-3 text-sm text-gray-400;
+        }
+
+        .htk-list-item .htk-list-item-actions {
+            @apply flex items-center;
+        }
+
+        .htk-list-item .htk-list-item-actions .htk-list-item-actions-divider {
+            @apply border-r border-gray-200 h-5 mx-2 w-[1px];
+        }
     }
 </style>
