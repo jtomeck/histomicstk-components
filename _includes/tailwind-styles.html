@@ -251,6 +251,45 @@
             @apply left-full ml-[2px] top-1/2 -translate-y-1/2;
         }
 
+        /*
+        Define List Elements
+        */
 
+        .htk-list {
+            
+        }
+
+        .htk-list-title,
+        .htk-list-item {
+            @apply flex border-b border-gray-200 items-center p-2;
+        }
+
+        .htk-list-title {
+            @apply text-neutral-500 text-sm;
+        }
+
+        .htk-list-item {
+            @apply py-1;
+        }
+
+        .htk-list-item > i {
+            @apply mr-2 text-lg text-neutral-500;
+        }
+
+        .htk-list-item .htk-list-item-name {
+            @apply flex-1;
+        }
+
+        .htk-list-item .htk-list-item-info {
+            @apply pr-3 text-sm text-gray-400;
+        }
+
+        .htk-list-item .htk-list-item-actions {
+            @apply flex items-center;
+        }
+
+        .htk-list-item .htk-list-item-actions .htk-list-item-actions-divider {
+            @apply border-r border-gray-200 h-5 mx-2 w-[1px];
+        }
     }
 </style>
