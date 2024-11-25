@@ -7,12 +7,12 @@ title: Inputs
         <h4 id="ignoreElement" class="pb-4">Text Inputs</h4>
 
         <!-- Text Input -->
-        <input type="text" class="bg-white border border-neutral-300 rounded-md w-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-1" placeholder="This is a text input">
+        <input type="text" class="hkt-text-input" placeholder="This is a text input">
 
         <!-- Text Input w/ Icon -->
-        <div class="relative flex w-full">
-            <i class="ri-search-line absolute top-1/2 -translate-y-1/2 left-0 pl-3"></i>
-            <input type="text" class="bg-white border border-neutral-300 w-full rounded-md px-3 pl-9 py-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-1" placeholder="Search">
+        <div class="hkt-text-with-icon-input">
+            <i class="hkt-text-with-icon-input--icon ri-search-line"></i>
+            <input type="text" class="hkt-text-with-icon-input--text" placeholder="Search">
         </div>
     </div>
 
@@ -21,28 +21,28 @@ title: Inputs
 
         <!-- Select Input -->
         <div class="relative flex">
-            <select class="bg-white border border-neutral-300 rounded-md px-3 py-2 text-sm text-neutral-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-1 appearance-none w-full" required>
+            <select class="hkt-select-input" required>
                 <option value="" disabled selected>Choose an option</option>
                 <option value="option1">Option 1</option>
                 <option value="option2">Option 2</option>
                 <option value="option3">Option 3</option>
             </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                <i class="ri-arrow-down-s-line text-neutral-400"></i>
+            <div class="hkt-select-input-chevron">
+                <i class="ri-arrow-down-s-line"></i>
             </div>
         </div>
 
         <!-- Select Input w/ Icon -->
-        <div class="relative flex">
-            <i class="ri-article-line absolute top-1/2 -translate-y-1/2 left-0 pl-2"></i>
-            <select class="bg-white border border-neutral-300 rounded-md px-8 py-2 text-sm text-neutral-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-1 appearance-none w-full" required>
+        <div class="hkt-select-with-icon-input">
+            <i class="ri-article-line hkt-select-with-icon-input--icon"></i>
+            <select class="hkt-select-with-icon-input--select" required>
                 <option value="" disabled selected>Choose an option</option>
                 <option value="option1">Option 1</option>
                 <option value="option2">Option 2</option>
                 <option value="option3">Option 3</option>
             </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                <i class="ri-arrow-down-s-line text-neutral-400"></i>
+            <div class="hkt-select-with-icon-input--chevron">
+                <i class="ri-arrow-down-s-line"></i>
             </div>
         </div>
     </div>
@@ -51,7 +51,7 @@ title: Inputs
         <h4 id="ignoreElement" class="pb-4">Textareas</h4>
 
         <!-- Text Input -->
-        <textarea class="bg-white border border-neutral-300 rounded-md w-full px-3 py-2 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-1" placeholder="Enter text here"></textarea>
+        <textarea class="hkt-textarea" placeholder="Enter text here"></textarea>
     </div>
 
     <div id="ignoreWrapper" class="p-4 rounded-md bg-white flex flex-col gap-2">
@@ -92,7 +92,7 @@ title: Inputs
                 </label>
             </li>
         </ul>
-        
+
     </div>
 
     <div id="ignoreWrapper" class="p-4 rounded-md bg-white flex flex-col gap-2">
@@ -133,6 +133,6 @@ title: Inputs
                 </label>
             </li>
         </ul>
-        
+
     </div>
 </div>
