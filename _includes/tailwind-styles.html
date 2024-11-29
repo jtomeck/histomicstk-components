@@ -282,71 +282,50 @@
         .htk-pagination {
             @apply flex justify-between items-center;
         }
+
         /*
-        Define Text Inputs
+        Define Inputs
         */
 
         .htk-text-input {
             @apply bg-white border border-neutral-300 rounded-md w-full px-3 py-2;
         }
 
-        .htk-text-input:focus {
-            @apply outline-none ring-2 ring-inset ring-secondary ring-offset-1;
-        }
-
-        .htk-text-with-icon-input {
-            @apply relative flex w-full;
-        }
-
-        .htk-text-with-icon-input--icon {
-            @apply absolute top-1/2 -translate-y-1/2 left-0 pl-3;
-        }
-
-        .htk-text-with-icon-input--text {
-            /* This is inheriting :focus properties from htk-text-input:focus */
-            @apply htk-text-input pl-9 py-2;
-        }
-
-        /*
-        Define Select Inputs
-        */
         .htk-select-input {
             @apply bg-white border border-neutral-300 rounded-md px-3 py-2 text-sm text-neutral-700 appearance-none w-full;
-        }
-
-        .htk-select-input:focus,
-        .htk-textarea:focus {
-            @apply outline-none ring-2 ring-inset ring-secondary ring-offset-1;
-        }
-
-        .htk-select-input-chevron,
-        .htk-select-with-icon-input--chevron {
-            @apply pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-neutral-400;
-        }
-
-        .htk-select-with-icon-input {
-            @apply relative flex;
-        }
-
-        .htk-select-with-icon-input--icon {
-            @apply absolute top-1/2 -translate-y-1/2 left-0 pl-2;
-        }
-
-        .htk-select-with-icon-input--select {
-            /* This is inheriting :focus properties from htk-select-input:focus */
-            @apply htk-select-input px-8;
         }
 
         .htk-textarea {
             @apply bg-white border border-neutral-300 rounded-md w-full px-3 py-2 placeholder-neutral-400;
         }
 
+        .htk-text-input:focus,
+        .htk-select-input:focus,
+        .htk-textarea:focus {
+            @apply outline-none ring-2 ring-inset ring-secondary ring-offset-1;
+        }
 
-        /*
-        Define Select Inputs
-        */
+        .htk-input-chevron {
+            @apply pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-neutral-400;
+        }
 
+        .htk-input-with-icon {
+            @apply relative flex;
+        }
 
+        .htk-input-with-icon i {
+            @apply absolute top-1/2 -translate-y-1/2 left-0 pl-3;
+        }
+
+        .htk-input-with-icon input {
+            /* This is inheriting :focus properties from htk-text-input:focus */
+            @apply htk-text-input pl-9 py-2;
+        }
+
+        .htk-input-with-icon select {
+            /* This is inheriting :focus properties from htk-select-input:focus */
+            @apply htk-select-input px-8;
+        }
 
     }
 </style>
