@@ -82,7 +82,7 @@
         .htk-btn.htk-btn-primary:hover {
             @apply bg-primary-hover;
         }
-        
+
         .htk-btn.htk-btn-secondary {
             @apply bg-secondary text-secondary-content;
         }
@@ -252,11 +252,87 @@
         }
 
         /*
+        Define Tables
+        */
+
+        .htk-table {
+            @apply max-w-full text-sm text-gray-700 text-center;
+        }
+
+        .htk-table thead {
+            @apply border-b-2 border-neutral-200 tracking-wider text-neutral-500;
+        }
+
+        .htk-table tbody tr {
+            @apply border-b border-neutral-200;
+        }
+
+        .htk-table tbody tr:hover {
+            @apply bg-neutral-100;
+        }
+
+        .htk-table tbody th{
+            @apply tracking-wider text-neutral-500;
+        }
+
+        .htk-table tfoot {
+            @apply border-t border-neutral-200;
+        }
+
+        .htk-pagination {
+            @apply flex justify-between items-center;
+        }
+
+        /*
+        Define Inputs
+        */
+
+        .htk-text-input {
+            @apply bg-white border border-neutral-300 rounded-md w-full px-3 py-2;
+        }
+
+        .htk-select-input {
+            @apply bg-white border border-neutral-300 rounded-md px-3 py-2 text-sm text-neutral-700 appearance-none w-full;
+        }
+
+        .htk-textarea {
+            @apply bg-white border border-neutral-300 rounded-md w-full px-3 py-2 placeholder-neutral-400;
+        }
+
+        .htk-text-input:focus,
+        .htk-select-input:focus,
+        .htk-textarea:focus {
+            @apply outline-none ring-2 ring-inset ring-secondary ring-offset-1;
+        }
+
+        .htk-input-chevron {
+            @apply pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-neutral-400;
+        }
+
+        .htk-input-with-icon {
+            @apply relative flex;
+        }
+
+        .htk-input-with-icon i {
+            @apply absolute top-1/2 -translate-y-1/2 left-0 pl-3;
+        }
+
+        .htk-input-with-icon input {
+            /* This is inheriting :focus properties from htk-text-input:focus */
+            @apply htk-text-input pl-9 py-2;
+        }
+
+        .htk-input-with-icon select {
+            /* This is inheriting :focus properties from htk-select-input:focus */
+            @apply htk-select-input px-8;
+        }
+
+       /*
         Define List Elements
         */
 
         .htk-list {
-            
+
         }
 
         .htk-list-title,

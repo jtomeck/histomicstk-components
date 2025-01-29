@@ -7,20 +7,20 @@ title: Table (Default)
     <div class="border border-neutral-300 bg-neutral-200 flex justify-between rounded-lg mb-3 min-h-10">
         <!-- Inputs -->
         <div class="flex flex-grow p-1 space-x-1">
-            <div class="relative flex">
-                <i class="ri-search-line absolute top-1/2 -translate-y-1/2 left-0 pl-2"></i>
-                <input type="text" class="bg-white border border-neutral-300 rounded-md px-1 pl-8 text-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-1 min-w-52" placeholder="Search Table">
+            <div class="htk-input-with-icon">
+                <i class="ri-search-line"></i>
+                <input type="text" class="min-w-52" placeholder="Search Table"> <!-- text-sm min-w-52 ?? making no difference? -->
             </div>
-            <div class="relative flex">
-                <i class="ri-article-line absolute top-1/2 -translate-y-1/2 left-0 pl-2"></i>
-                <select class="bg-white border border-neutral-300 rounded-md px-8 text-sm text-neutral-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary focus:ring-offset-1 appearance-none min-w-52" required>
+            <div class="htk-input-with-icon">
+                <i class="ri-article-line"></i>
+                <select class="min-w-52" required>
                     <option value="" disabled selected>Choose a view</option>
                     <option value="option1">Option 1</option>
                     <option value="option2">Option 2</option>
                     <option value="option3">Option 3</option>
                 </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                    <i class="ri-arrow-down-s-line text-neutral-400"></i>
+                <div class="htk-input-chevron">
+                    <i class="ri-arrow-down-s-line"></i>
                 </div>
             </div>
         </div>
@@ -38,9 +38,9 @@ title: Table (Default)
         </div>
     </div>
 
-    <table cellspacing="0" cellpadding="10" class="max-w-full text-sm text-gray-700 text-center"
+    <table cellspacing="0" cellpadding="10" class="htk-table"
         width="100%">
-        <thead class="border-b-2 border-neutral-200 tracking-wider text-neutral-500">
+        <thead>
             <tr>
                 <th scope="col"></th>
                 <th scope="col">Column Name</th>
@@ -52,8 +52,8 @@ title: Table (Default)
             </tr>
         </thead>
         <tbody>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -61,8 +61,8 @@ title: Table (Default)
                 <td>Data</td>
                 <td>Data</td>
             </tr>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -70,8 +70,8 @@ title: Table (Default)
                 <td>Data</td>
                 <td>Data</td>
             </tr>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -79,8 +79,8 @@ title: Table (Default)
                 <td>Data</td>
                 <td>Data</td>
             </tr>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -88,8 +88,8 @@ title: Table (Default)
                 <td>Data</td>
                 <td>Data</td>
             </tr>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -97,8 +97,8 @@ title: Table (Default)
                 <td>Data</td>
                 <td>Data</td>
             </tr>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -106,8 +106,8 @@ title: Table (Default)
                 <td>Data</td>
                 <td>Data</td>
             </tr>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -115,8 +115,8 @@ title: Table (Default)
                 <td>Data</td>
                 <td>Data</td>
             </tr>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -124,8 +124,8 @@ title: Table (Default)
                 <td>Data</td>
                 <td>Data</td>
             </tr>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -133,8 +133,8 @@ title: Table (Default)
                 <td>Data</td>
                 <td>Data</td>
             </tr>
-            <tr class="border-b border-neutral-200 hover:bg-neutral-100">
-                <th class="tracking-wider text-neutral-500" scope="row">Row Name</th>
+            <tr>
+                <th scope="row">Row Name</th>
                 <td>Data</td>
                 <td>Data</td>
                 <td>Data</td>
@@ -144,10 +144,10 @@ title: Table (Default)
             </tr>
         </tbody>
 
-        <tfoot class="border-t border-neutral-200">
+        <tfoot>
             <tr>
                 <td colspan="7" class="p-4">
-                    <div class="flex justify-between items-center">
+                    <div class="htk-pagination">
                         <div>
                             <span class="text-neutral-500">Showing 1 to 10 of 200 entries</span>
                         </div>
