@@ -327,5 +327,106 @@
             @apply htk-select-input px-8;
         }
 
+       /*
+        Define List Elements
+        */
+
+        .htk-list {
+
+        }
+
+        .htk-list-title,
+        .htk-list-item {
+            @apply flex border-b border-gray-200 items-center p-2;
+        }
+
+        .htk-list-title {
+            @apply text-neutral-500 text-sm;
+        }
+
+        .htk-list-item {
+            @apply py-1;
+        }
+
+        .htk-list-item > i {
+            @apply mr-2 text-lg text-neutral-500;
+        }
+
+        .htk-list-item .htk-list-item-name {
+            @apply flex-1;
+        }
+
+        .htk-list-item .htk-list-item-info {
+            @apply pr-3 text-sm text-gray-400;
+        }
+
+        .htk-list-item .htk-list-item-actions {
+            @apply flex items-center;
+        }
+
+        .htk-list-item .htk-list-item-actions .htk-list-item-actions-divider {
+            @apply border-r border-gray-200 h-5 mx-2 w-[1px];
+        }
+
+        /*
+        Define Menu Elements
+        */
+
+        .htk-menu-group {
+            @apply relative max-w-max max-h-max;
+        }
+
+        .htk-menu-trigger {}
+
+        .htk-menu,
+        .htk-menu-hover {
+            @apply hidden py-2 absolute min-w-48 z-10;
+        }
+
+        .htk-menu-items {
+            @apply bg-white p-1 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 space-y-[2px];
+        }
+
+        .htk-menu-hover:hover,
+        .htk-menu-trigger:focus ~ .htk-menu,
+        .htk-menu-trigger:focus-within ~ .htk-menu,
+        .htk-menu-group:hover .htk-menu-hover {
+            @apply block;
+        }
+
+        .htk-menu-item a {
+            @apply text-gray-700 block px-3 py-2 text-sm rounded-md;
+        }
+
+        .htk-menu-item:hover a {
+            @apply bg-neutral-100;
+        }
+
+        /* Top Positions */
+        .htk-menu-top-left {
+            @apply absolute top-0 left-0 translate-y-[-100%]; /* Align to the top-left of the trigger */
+        }
+
+        .htk-menu-top-center {
+            @apply absolute top-0 left-1/2 translate-y-[-100%] translate-x-[-50%]; /* Align to the top-center of the trigger */
+        }
+
+        .htk-menu-top-right {
+            @apply absolute top-0 right-0 translate-y-[-100%]; /* Align to the top-right of the trigger */
+        }
+
+        /* Bottom Positions */
+        .htk-menu-bottom-left {
+            @apply absolute top-full left-0; /* Align to the bottom-left of the trigger */
+        }
+
+        .htk-menu-bottom-center {
+            @apply absolute top-full left-1/2 translate-x-[-50%]; /* Align to the bottom-center of the trigger */
+        }
+
+        .htk-menu-bottom-right {
+            @apply absolute top-full right-0; /* Align to the bottom-right of the trigger */
+        }
+
     }
 </style>
