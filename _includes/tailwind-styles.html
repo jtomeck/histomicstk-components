@@ -52,7 +52,7 @@
         */
 
         .htk-btn {
-            @apply duration-200 ease-in-out inline-flex items-center justify-center px-3 py-[6px] rounded-md text-base tracking-wider transition-all gap-2 h-9;
+            @apply duration-200 ease-in-out inline-flex items-center justify-center px-3 py-[6px] rounded-md text-base tracking-wider transition-all gap-2 h-9 hover:scale-[103%] active:scale-100;
         }
 
         .htk-btn i {
@@ -175,6 +175,11 @@
             @apply bg-neutral-200 border border-neutral-300 text-neutral-400 !cursor-not-allowed;
         }
 
+        /* Disabled Animations */
+        .htk-btn.htk-btn-disabled:active {
+            @apply animate-wiggle scale-100;
+        }
+
         /*
         Define Form Elements
         */
@@ -182,41 +187,47 @@
         /* Use Remix Icons for checkboxes & radio buttons */
         .htk-checkbox,
         .htk-radio {
-            display: inline-flex;
-            align-items: center;
-            cursor: pointer;
-            user-select: none;
+            @apply inline-flex items-center cursor-pointer relative select-none;
         }
 
         .htk-checkbox input,
         .htk-radio input {
-            display: none;
+            @apply hidden;
         }
 
         .htk-checkbox .htk-icon-unchecked,
         .htk-radio .htk-icon-unchecked {
-            display: inline;
+            @apply inline text-neutral-500 mr-3 text-xl;
         }
 
         .htk-checkbox .htk-icon-checked,
         .htk-radio .htk-icon-checked {
-            display: none;
+            @apply hidden text-secondary mr-3 text-xl;
         }
 
         .htk-checkbox input:checked ~ .htk-icon-unchecked,
         .htk-radio input:checked ~ .htk-icon-unchecked {
-            display: none;
+            @apply hidden;
         }
 
         .htk-checkbox input:checked ~ .htk-icon-checked,
         .htk-radio input:checked ~ .htk-icon-checked {
-            display: inline;
+            @apply inline;
+        }
+        
+        .htk-checkbox .htk-ping-animation,
+        .htk-radio .htk-ping-animation {
+            @apply absolute hidden text-secondary text-xl;
         }
 
+        .htk-checkbox input:checked ~ .htk-ping-animation,
+        .htk-radio input:checked ~ .htk-ping-animation {
+            @apply inline absolute text-secondary text-xl animate-[ping_400ms_ease-in-out_1];
+        }
 
         /* Show default select option gray like a placeholder */
         select:invalid {
-            color: #9ca3af !important; /* Tailwind's neutral-400 */
+            @apply text-neutral-400 !important;
         }
 
         /*
@@ -264,11 +275,11 @@
         }
 
         .htk-table tbody tr {
-            @apply border-b border-neutral-200;
+            @apply duration-300 transition-all border-b border-neutral-200;
         }
 
         .htk-table tbody tr:hover {
-            @apply bg-neutral-100;
+            @apply bg-neutral-50;
         }
 
         .htk-table tbody th{
